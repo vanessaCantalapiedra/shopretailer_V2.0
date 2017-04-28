@@ -8,7 +8,7 @@ Very simple version of a shop retail manager API, using REST services.
 
 Basically it has to cover the following actions:
  - Add a new Shop : when a user POST a shop info, the shop is stored.
-    * For concurrent inserts, all the shops must be inserted.
+    * For concurrent inserts, all the shops must be inserted/modified.
  - Modify an existing Shop: when a user POST an existing shop, the shop is updated. The old version of the shop is returned.
  - Get all Shops
  - Given latitude and longitude information in the url by a client , locate the shop closest to him and returning the address info of the shop.
@@ -44,6 +44,9 @@ Some Java unit-tests and integration tests are included. To execute them, run:
 The project has been configured to perform Continuous Integration using Travis CI. In the top of this document the status of the build can be check, also it has the direct link to travis build page.
 
 ### Development Comments
+
+#### HATEOAS
+The app follows the HATEOAS principles or constraints, the response results are given in the format HAL+json
 
 #### Validation
 I have used JSR-303 for the validation of the request parameters. I'd have liked to do more checkings and validations to avoid unexpected errors.
