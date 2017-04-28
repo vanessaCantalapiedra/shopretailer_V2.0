@@ -62,7 +62,7 @@ The Harvesine formula is used to calculate the distance between 2 points given t
 #### TODO
 I'd have liked to add more tests, specially real unit tests. Also It has to be improve the error control when the user inputs data for new or old shop.
 Apart from that it would be nice to have a better way to deploy it, like generating a image or docker file.
-By using the concurrentHashMap makes the app difficult to scale, so the persistance layer should be implemented in another way.
+By using the concurrentHashMap makes the app difficult to scale, so the persistance layer should be implemented in another way. 
 
 #### RANDOM COMMENTS - ANSWERING QUESTIONS
 
