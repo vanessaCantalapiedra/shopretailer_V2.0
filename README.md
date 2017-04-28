@@ -41,7 +41,7 @@ Some Java unit-tests and integration tests are included. To execute them, run:
 ./gradlew test # use 'gradlew.bat test' on windows
 ```
 #### CI
-The project has been configured to perform Continuous Integration using Travis CI. In the top of this document the status of the build can be check, also it has the direct link to travis build page.
+The project has been configured to perform Continuous Integration using Travis CI. In the top of this document the status of the build can be checked, also it has the direct link to the travis build page.
 
 ### Development Comments
 
