@@ -26,14 +26,12 @@ Basically it has to cover the following actions:
 ./gradlew bootRun # use 'gradlew.bat bootRun' on Windows
 ```
 
-I have used STS as IDE , so I have included the project file , in case someone finds useful.
-
 #### Distributing the Service
 
 ```sh
 ./gradlew build # use 'gradlew.bat build' on Windows
 ```
-generates the binary `./build/libs/shopretailer-rest-service.jar`
+generates the binary `./build/libs/shopretailer-rest-service-2.1.0.jar`
 
 #### Testing the Service
 
@@ -62,19 +60,21 @@ The call to the Google Api is done in a asynchrous way, using callbacks and Comp
 The Harvesine formula is used to calculate the distance between 2 points given their latitude and longitude.
 
 #### TODO
-I'd have liked to add more test unit cases (Junit) and better integration tests (mock mvc), apart from a way to deploy it , like a docker file. Also It would be interesting to get a ranking of nearest shops given geolocation instead of only the first one. Apart from that I'd add a persistent layer implementation with a realdatabase
+I'd have liked to add more tests, specially real unit tests. Also It has to be improve the error control when the user inputs data for new or old shop.
+Apart from that it would be nice to have a better way to deploy it, like generating a image or docker file.
+By using the concurrentHashMap makes the app difficult to scale, so the persistance layer should be implemented in another way.
 
 #### RANDOM COMMENTS - ANSWERING QUESTIONS
 
 How you would expand this solution, given a longer development period?
 
 How would you go about testing this solution?
-I have created some integrating testing with mockito, basically calling for the main functions exposed by our api.
+I have created some integrating testing with mockito, basically calling for the main functions exposed by our api. 
 
 How would you integrate this solution into an existing collection of solutions used by the Retail Manager?
 Probably this solution is suitable to be implemented as a microservice, so you can integrate with the rest of the microservices of the App.
 
 How would you go about deploying this solution to production systems?
-Docker image file can be used. 
+Docker image file can be used. Also it would be nice to do this process automatically, configuring the build and including this deployment step in the CI system.
 
 I enjoyed coding it because I had the opportunity to research and use technologies  i have never worked with, such as Google Api for example. I had fun, thanks for the challenge.
