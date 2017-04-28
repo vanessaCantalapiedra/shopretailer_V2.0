@@ -46,7 +46,7 @@ The project has been configured to perform Continuous Integration using Travis C
 ### Development Comments
 
 #### HATEOAS
-The app follows the HATEOAS principles or constraints, the response results are given in the format HAL+json
+The app follows the HATEOAS principles or constraints, the response results are given in the HAL+json format. To delegate or make easier these tasks a ResourceAssembler class has been created , which is in charge of the proper transformations.
 
 #### Validation
 I have used JSR-303 for the validation of the request parameters. I'd have liked to do more checkings and validations to avoid unexpected errors.
@@ -57,7 +57,7 @@ Also a @ControllerAdvice class has been used to treat the exceptions generated b
 For this version of the application, persistence has not been implemented. A basic respository has been created with a ConcurrentHashMap that allows the basic CRUD operations. The ConcurrentHashMap is suitable for this situation , due basically to the "save" method , which returns the previous version of the object in a single synchronization call, apart from the putIfAbsent , which will atomically add a mapping if the specified key does not exist. Besides it does not lock the entire table,only the segment, what is suitable for a high rate of updates or insertions.
 
 #### Asynchronous operations
-The call to the Google Api is done in a asynchrous way, using callbacks and CompletableFuture future (JAVA 8). This way , the response  to the client does not have to wait for the answer from Google. The geolocation info will be updated in the shop when the callback is called.
+The call to the Google Api is done in a asynchrous way, using callbacks and CompletableFuture future (JAVA 8). This way , the response  to the client does not have to wait for the answer from Google, avoiding latency. The geolocation info will be updated in the shop when the callback is called.
 
 #### Harvesine
 The Harvesine formula is used to calculate the distance between 2 points given their latitude and longitude.
