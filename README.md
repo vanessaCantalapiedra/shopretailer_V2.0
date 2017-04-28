@@ -74,7 +74,7 @@ By using the concurrentHashMap makes the app difficult to scale, so the persista
 I would focus on the consistency of the data when concurrent access happens, and concurrency problems in general. Also I'd improve the testing (stress, integration, and unit testing) , and the deployment.
 The treatment of errors could be improve, with custom exception handlers, and the validation of the input data.
 Also this app could be a part of a bigger system, could be a microservice.
-A system to storage data persistenly has to be implemented and managed.
+A system to storage data persistenly has to be implemented and managed, such as a Hazelcast table or a database with JPA/Hibernate.
 
 * How would you go about testing this solution?
 
