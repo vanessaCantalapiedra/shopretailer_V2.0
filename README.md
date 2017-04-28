@@ -8,7 +8,7 @@ Very simple version of a shop retail manager API, using REST services.
 
 Basically it has to cover the following actions:
  - Add a new Shop : when a user POST a shop info, the shop is stored.
-    * For concurrent inserts, only the first one is taken into account, the second client petition is rejected.
+    * For concurrent inserts, all the shops must be inserted.
  - Modify an existing Shop: when a user POST an existing shop, the shop is updated. The old version of the shop is returned.
  - Get all Shops
  - Given latitude and longitude information in the url by a client , locate the shop closest to him and returning the address info of the shop.
