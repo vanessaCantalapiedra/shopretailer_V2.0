@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vanessaCantalapiedra/shopretailer_V2.0.svg?branch=master)](https://travis-ci.org/vanessaCantalapiedra/shopretailer_V2.0)
+[![Build Status](https://travis-ci.org/vanessaCantalapiedra/shopretailer_v2.0.svg?branch=master)](https://travis-ci.org/vanessaCantalapiedra/shopretailer_v2.0)
 
 SHOP RETAIL MANAGER  - REST API 
 ====================================
