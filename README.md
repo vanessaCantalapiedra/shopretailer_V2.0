@@ -70,9 +70,14 @@ By using the concurrentHashMap makes the app difficult to scale, so the persista
 #### RANDOM COMMENTS - ANSWERING QUESTIONS
 
 How you would expand this solution, given a longer development period?
+I would focus on the consistency of the data when concurrent access happens, and concurrency problems in general. Also I'd improve the testing (stress, integration, and unit testing) , and the deployment.
+The treatment of errors could be improve, with custom exception handlers, and the validation of the input data.
+Also this app could be a part of a bigger system, could be a microservice.
+A system to storage data persistenly has to be implemented and managed.
 
 How would you go about testing this solution?
 I have created some integrating testing with mockito, basically calling for the main functions exposed by our api. 
+For my own tests I have used also postman, that it allows you to create a collection of requests and saved them.
 
 How would you integrate this solution into an existing collection of solutions used by the Retail Manager?
 Probably this solution is suitable to be implemented as a microservice, so you can integrate with the rest of the microservices of the App.
